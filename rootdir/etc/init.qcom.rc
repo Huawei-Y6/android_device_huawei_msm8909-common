@@ -258,10 +258,6 @@ on post-fs-data
     chmod 2770 /data/system/perfd
     mkdir /persist/drm 0770 system system
 
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-
     # Sensor
     mkdir /persist/sensors 0770 system system
 
@@ -505,7 +501,7 @@ service qmiproxy /system/bin/qmiproxy
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc qcom_diag
+    group radio audio bluetooth gps qcom_diag
     disabled
 
 service netmgrd /system/bin/netmgrd
